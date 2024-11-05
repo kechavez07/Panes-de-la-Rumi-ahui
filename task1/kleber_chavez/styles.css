@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9fafb;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+
+  .header {
+    background-color: #FF0066;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+
+  }
+  .logo2{
+    margin-left: 20px;
+    background-color: white;
+    color: #FF0066;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+  } 
+  .logo h4{
+    margin-left: 10px;
+    margin-top: 6px;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    color: white;
+    font-size: 0.875rem;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .main {
+    display: flex;
+    gap: 30px;
+    margin: 15px;
+    margin-top: 40px;
+  }
+  
+  .main-content {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+  }
+  
+  .left-column {
+    flex: 2;
+  }
+  
+  .right-column {
+    flex: 1;
+  }
+  .welcome-section {
+        display: flex;
+        justify-content: space-between;
+    }
+  .welcome-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4b4b4b;
+  }
+  
+  .messages,
+  .phone-number {
+    font-size: 1rem;
+    color: #9b4d96;
+    margin-top: 15px;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .card-content {
+    padding: 20px;
+    
+  }  
+  .profile-picture {
+    border-radius: 50%;
+    border: 4px solid #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+  }
+  .datos-paquete{
+    display: flex;
+    justify-content: space-between;
+  }
+  .center{
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #4b4b4b;
+  }
+  
+  p {
+    color: #6b7280;
+  }
+  
+  .btn {
+    background-color: #6b21a8;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #7e22ce;
+  }
+  
+  .btn-link {
+    background: none;
+    color: #ffffff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .card-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .promo-section h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #4b4b4b;
+    margin-bottom: 10px;
+  }
+  
+  .promo-card {
+    background: linear-gradient(to right, #6b21a8, #f43f5e);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .promo-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .service-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .service-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: #f3e8ff;
+    border-radius: 5px;
+    border: 1px solid #dcd7ff;
+    cursor: pointer;
+    color: #6b21a8;
+  }
+  
+  .service-btn:hover {
+    background-color: #e9d4ff;
+  }
+  
