@@ -1,0 +1,159 @@
+body{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: skyblue;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer {
+    color:  rgb(0, 164, 235);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.icon{
+    margin-left: 20px;
+    background-color: white;
+    color: skyblue;
+    text-align: center;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+.main-combo{
+    padding-top: 120px;
+    text-align: center;
+}
+
+.container-combos{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    gap: 25px;
+    padding: 15px;
+    justify-content: center;
+}
+
+.combo {
+    background-color: white;
+    color: black;
+    width: 250px;
+    height: 215px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid skyblue;
+    box-shadow: 0px 4px 8px rgb(135, 206, 235);
+}
+
+.combo:hover{
+    transform: scale(1.05);
+    transition: transform 0.1s ease;
+}
+
+.combo-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.combo-title h3{
+    color: rgb(0, 164, 235);
+}
+
+.combo-text{
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.combo-text img{
+    height: 12px;
+    width: auto;
+}
+
+.combo-foot{
+    margin-left: 10px;
+    margin-top: 25px;
+    font-size: small;
+    color: rgb(44, 44, 44);
+}
+
+.main-wildcard{
+    margin-top: 55px;
+    text-align: center;
+}
+
+.container-wildcard{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    gap: 25px;
+    padding: 15px;
+    justify-content: center;
+}
+
+.wildcard {
+    background-color: white;
+    color: black;
+    width: 325px;
+    height: 165px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid skyblue;
+    box-shadow: 0px 4px 8px rgb(135, 206, 235);
+}
+
+.wildcard:hover{
+    transform: scale(1.05);
+    transition: transform 0.1s ease;
+}
+
+.wildcard-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.wildcard-title h3{
+    color: rgb(0, 164, 235);
+}
+
+.wildcard-text{
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.wildcard-foot{
+    margin-left: 10px;
+    margin-top: 25px;
+    font-size: small;
+    color: rgb(44, 44, 44);
+}
+
+.main-follow{
+    margin-top: 75px;
+    text-align: center;
+}
+
+.main-follow img{
+    height: 80px;
+    width: auto;
+}
