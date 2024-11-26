@@ -7,21 +7,7 @@
     <title>History</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html"><img src="logo.jpg" alt="Logo"></a>
-        </div>
-        <nav class="menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="product.html">Product</a></li>
-            <li><a href="promotion.html">Promotion</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="termsConditions.html">Terms and Conditions</a></li>
-          </ul>
-        </nav>
-      </header>
+    <?php include 'menu/menu.php'; ?>
       <main>
         <section class="hero">
             <h1>Our Story</h1>

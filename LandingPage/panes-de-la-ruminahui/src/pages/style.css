@@ -1,0 +1,33 @@
+.primary-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    height: 20rem;
+    background-color: var(--color9);
+}
+
+.primary-container h1{
+    color: var(--color12);
+}
+
+.primary-container p{
+    color: var(--color12);
+}
+
+.button-whatsapp {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 9999;
+}
+
+.container-cards {
+    margin: 30rem 3rem 3rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}

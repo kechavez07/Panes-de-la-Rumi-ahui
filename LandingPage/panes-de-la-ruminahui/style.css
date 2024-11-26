@@ -1,0 +1,38 @@
+:root {
+  /* COLORES PRINCIPALES */
+  /* para transmitir frescura, suavidad y calidad artesana*/
+  --color1: #F5F5DC;
+  --color2: #E1C699;
+  /* para representar el pan y productos horneados */
+  --color3: #D29E6D;
+  /* para resaltar la frescura y dar energía */
+  --color4: #FFA07A;
+
+  /* COLORES SECUNDARIOS */
+  /* para destacar el frescor y lo artesanal */
+  --color5: #FFF8DC;
+  /* para resaltar productos dulces y golosinas */
+  --color6: #F8C8D3;
+  /* para resaltar lo fresco y natural */
+  --color7: #A8D5BA;
+
+  /* FONDOS */
+  /* para que el contenido resalte y para mantener la claridad */
+  --color8: #FFFFFF;
+  /* para suavizar y dar profundidad sin recargar */
+  --color9: #f8f8f8;
+  /* para destacar botones y llamadas a la acción */
+  --color10: #FF6F61;
+  /* para resaltar la calidad premium de algunos productos */
+  --color11: #FFD700;
+  /* azul oscuro */
+  --color12: #081d46;
+}
+
+* {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+  background-color: white;
+}

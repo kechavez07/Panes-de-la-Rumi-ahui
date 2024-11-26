@@ -4,44 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Product</title>
+    <title>Promotion</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html"><img src="logo.jpg" alt="Logo"></a>
-        </div>
-        <nav class="menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="history.html">History</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="promotion.html">Promotion</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="termsConditions.html">Terms and Conditions</a></li>
-          </ul>
-        </nav>
-      </header>
+    <?php include 'menu/menu.php'; ?>
       <main>
         <section class="hero">
-            <h1>Our Products</h1>
-            <p>Delight in our wide variety of baked goods, crafted with care and the finest ingredients.</p>
+            <h1>Special Promotions</h1>
+            <p>Don't miss out on our exclusive deals and discounts!</p>
         </section>
     
-        <section class="product-list">
-            <h2>Featured Products</h2>
-            <div class="product-items">
-                <div class="product-item">
-                    <h3>Artisan Bread</h3>
-                    <p>Rustic and flavorful, perfect for every meal.</p>
+        <section class="current-promotions">
+            <h2>Current Offers</h2>
+            <div class="promotion-items">
+                <div class="promotion-item">
+                    <h3>Buy 1 Get 1 Free</h3>
+                    <p>On all artisan breads every Wednesday.</p>
+                    <p><strong>Valid until:</strong> [Insert Date]</p>
                 </div>
-                <div class="product-item">
-                    <h3>Custom Cakes</h3>
-                    <p>Beautifully crafted cakes for special occasions.</p>
+                <div class="promotion-item">
+                    <h3>20% Off Custom Cakes</h3>
+                    <p>Order a custom cake this month and save big!</p>
+                    <p><strong>Valid until:</strong> [Insert Date]</p>
                 </div>
-                <div class="product-item">
-                    <h3>Cookies</h3>
-                    <p>Sweet, crunchy, and impossible to resist.</p>
+                <div class="promotion-item">
+                    <h3>Free Coffee</h3>
+                    <p>Get a free coffee with any pastry purchase on Fridays.</p>
+                    <p><strong>Valid until:</strong> [Insert Date]</p>
                 </div>
             </div>
         </section>
