@@ -1,0 +1,132 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Menu Container */
+.menu-container {
+    position: relative;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #333;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    border-right: 2px solid #ddd;
+    transition: left 0.3s ease;
+    padding: 20px;
+    z-index: 999;
+}
+
+/* Menu for larger screens */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu {
+        position: static;
+        width: 250px;
+        height: auto;
+        border: none;
+        transition: none;
+    }
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-info h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.profile-info p {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Submenú */
+.submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* Oculto por defecto */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.submenu li {
+    padding: 10px;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.submenu li:hover {
+    background-color: #e6e6e6;
+}
+
+/* Mostrar el submenú al pasar el mouse */
+li:hover > .submenu {
+    display: block;
+}

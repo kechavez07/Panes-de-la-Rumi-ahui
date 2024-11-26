@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Desplegable</title>
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+  <div class="menu-container">
+    <button class="menu-toggle" id="menu-toggle">
+      &#9776;
+    </button>
+    <div class="menu" id="menu">
+      <div class="profile">
+        <img class="avatar" src="https://github.com/shadcn.png" alt="Avatar">
+        <div class="profile-info">
+          <h2>Carlos Nombre</h2>
+          <p>carlos@ejemplo.com</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Perfil</a></li>
+          <li>
+            <a href="#">Configuración</a>
+            <!-- Submenú para configuración -->
+            <ul class="submenu">
+              <li><a href="editar_menu.html">Editar Menú</a></li>
+              <li><a href="editar_promocion.html">Editar Promoción</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
