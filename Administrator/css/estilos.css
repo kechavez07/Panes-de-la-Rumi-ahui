@@ -1,10 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url("../img/fondo_login.jpg"); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    background-position: center; 
+    background-image: url("../img/fondo_login.jpg");
+    background-attachment: fixed;
+    background-position: center;
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,12 +12,13 @@ body {
 }
 
 .form-container {
-    background: rgba(255, 255, 255, 0.9); 
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
+    position: relative;
     text-align: center;
 }
 
@@ -27,6 +26,7 @@ h1 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #343a40;
+    text-align: center; /* Centrado del título */
 }
 
 label {
@@ -59,8 +59,40 @@ input:focus, textarea:focus, select:focus {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    
 }
 
 .btn:hover {
     background-color: #cf8353;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color:  #e59866;
+    border: none;
+    border-radius: 30%; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+}
+
+.back-button:hover {
+    background-color: #cf8353;
+}
+
+.back-button:active {
+    background-color: #c4653c;
+}
+
+.back-button svg {
+    width: 20px; 
+    height: 20px;
+    fill: #fff;
 }

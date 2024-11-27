@@ -9,6 +9,11 @@
 </head>
 <body>
     <div class="form-container">
+        <button class="back-button" onclick="history.back()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z" />
+            </svg>
+        </button>
         <h1>Editar Promoción</h1>
         <form id="form_promocion">
             <label for="nombre_promo">Nombre de la Promoción:</label>
@@ -27,7 +32,6 @@
             <input type="date" id="fecha_fin" name="fecha_fin">
 
             <button type="submit" class="btn">Guardar Promoción</button>
-            <button type="button" class="btn regresar" onclick="location.href='home.html'">Regresar</button>
         </form>
     </div>
 </body>
