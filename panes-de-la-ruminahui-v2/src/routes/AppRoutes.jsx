@@ -5,7 +5,6 @@ import History from '../pages/History';
 import Product from '../pages/Product';
 import Promotion from '../pages/Promotion';
 import Contact from '../pages/Contact';
-import Location from '../pages/Location';
 
 const AppRoutes = () => {
     return (
@@ -15,7 +14,6 @@ const AppRoutes = () => {
             <Route path="/product" element={<Product />} />
             <Route path="/promotion" element={<Promotion />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/location" element={<Location />} />
         </Routes>
     );
 };

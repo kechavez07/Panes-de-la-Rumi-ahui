@@ -15,7 +15,6 @@ const Home = () => {
                 <Link to="/product" className="header-item"><Card1 text="Productos" path="/icons/shopping-car.svg"/></Link>
                 <Link to="/promotion" className="header-item"><Card1 text="Promociones" path="/icons/star.svg"/></Link>
                 <Link to="/contact" className="header-item"><Card1 text="Contactos" path="/icons/comment.svg"/></Link>
-                <Link to="/location" className="header-item"><Card1 text="Ubicación" path="/icons/location.svg"/></Link>
             </div>
         </>
     )

@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import './Header.css'
 
 const Header = () => {
+    const goToAdmin = () => {
+        const path = '/Administrator/index.html'
+        window.open(path, '_blank')
+    }
+
     return (
         <div className="header">
             <div className="header-logo">
@@ -14,7 +19,7 @@ const Header = () => {
                 <Link to="/product" className="header-item">Productos</Link>
                 <Link to="/promotion" className="header-item">Promociones</Link>
                 <Link to="/contact" className="header-item">Contactos</Link>
-                <Link to="/location" className="header-item">Ubicación</Link>
+                <button onClick={goToAdmin} className="header-item-button">Login</button>
             </div>
         </div>
     )
