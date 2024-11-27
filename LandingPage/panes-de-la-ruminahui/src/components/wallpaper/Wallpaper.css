@@ -51,6 +51,10 @@
   font-weight: 600;
 }
 
+.infotop h1 {
+  color: white;
+}
+
 .wave:nth-child(2),
 .wave:nth-child(3) {
   top: 210px;

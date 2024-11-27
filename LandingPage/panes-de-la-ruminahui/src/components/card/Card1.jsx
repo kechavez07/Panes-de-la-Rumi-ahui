@@ -5,7 +5,7 @@ const Card1 = (props) => {
     const { text, path } = props;
     return (
         <>
-            <div class="card wallet">
+            <div class="card1 wallet">
                 <div class="overlay"></div>
                 <div class="circle">
                     <img src={path} alt="Icon" />

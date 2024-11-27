@@ -31,3 +31,27 @@
     gap: 3rem;
     justify-content: center;
 }
+
+.container-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin: 3rem 0 3rem 0;
+}
+
+.contact-info{
+    color: var(--color12);
+    justify-items: center;
+    margin: 5rem 2rem;
+}
+
+.map {
+    justify-items: center;
+    margin: 2rem;
+}
+
+.map iframe {
+    border: none;
+    border-radius: 8px;
+  }

@@ -9,7 +9,7 @@
     --box-shadow-color: rgba(56, 76, 255, 0.801);
   }
   
-  .card {
+  .card1 {
     width: 220px;
     height: 321px;
     background: #fff;
@@ -25,30 +25,30 @@
     text-decoration: none;
   }
   
-  .card:hover {
+  .card1:hover {
     transform: translateY(-5px) scale(1.005) translateZ(0);
     box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
       0 24px 46px var(--box-shadow-color);
   }
   
-  .card:hover .overlay {
+  .card1:hover .overlay {
     transform: scale(4) translateZ(0);
   }
   
-  .card:hover .circle {
+  .card1:hover .circle {
     border-color: var(--bg-color-light);
     background: var(--bg-color);
   }
   
-  .card:hover .circle:after {
+  .card1:hover .circle:after {
     background: var(--bg-color-light);
   }
   
-  .card:hover p {
+  .card1:hover p {
     color: var(--text-color-hover);
   }
   
-  .card p {
+  .card1 p {
     font-size: 17px;
     color: #4c5656;
     margin-top: 30px;

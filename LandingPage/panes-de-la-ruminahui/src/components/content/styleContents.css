@@ -1,0 +1,8 @@
+.container-title {
+    justify-items: center;
+    margin: 4rem 0 3rem 0;
+}
+
+h1 {
+    color: var(--color12);
+}
