@@ -17,15 +17,30 @@ async function onSubmit(event) {
     }
 }
 
-function validateUser() {
+async function validateUser() {
     const user = document.getElementById('user').value;
     const password = document.getElementById('password').value;
+    // concecion de la base de base de datos con usurios
+    const formData = new FormData();
+    formData.append('user', user);
+    formData.append('password', password);
 
-    if (user === 'admin' && password === 'admin') {
-        return true;
-    } else {
+    try {
+        const response = await fetch('/path/to/your/php/login.php', {
+            method: 'POST',
+            body: formData
+        });
+        const result = await response.json();
+
+        if (result.success) {
+            return true;
+        }
+
+    } catch (error) {
+        console.error('Error:', error);
         return false;
     }
+
 }
 
 const user = document.getElementById('user');
