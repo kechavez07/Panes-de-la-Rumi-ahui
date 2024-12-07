@@ -1,3 +1,7 @@
+<?php
+$categories = include 'php/get_categories.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,28 +18,30 @@
             </svg>
         </button>
         <h1>Editar Menú</h1>
-        <form id="form_menu">
+        <form id="form_menu" method="POST" action="php/save_product.php">
             <label for="nombre">Nombre del Producto:</label>
-            <input type="text" id="nombre" name="nombre">
+            <input type="text" id="name" name="name">
 
             <label for="descripcion">Descripción:</label>
-            <textarea id="descripcion" name="descripcion" rows="3"></textarea>
+            <textarea id="description" name="description" rows="3"></textarea>
 
             <label for="precio">Precio (USD):</label>
-            <input type="number" id="precio" name="precio" step="0.01">
+            <input type="number" id="price" name="price" step="0.01">
 
             <label for="categoria">Categoría:</label>
-            <select id="categoria" name="categoria">
+            <select id="id_category" name="id_category">
                 <option value="">Seleccionar</option>
-                <option value="panes">Panes</option>
-                <option value="pasteles">Pasteles</option>
-                <option value="bebidas">Bebidas</option>
+                <?php foreach ($categories as $row): ?>
+                    <option value="<?= htmlspecialchars($row['id_category']) ?>">
+                        <?= htmlspecialchars($row['name']) ?>
+                    </option>
+                <?php endforeach; ?>
             </select>
 
             <button type="submit" class="btn" id="submit-button">Guardar Cambios</button>
         </form>
     </div>
-    <script src="../js/validar_menu.js" defer></script>
-    <script src="../js/editMenu.js"></script>
+    <!-- <script src="../js/validar_menu.js" defer></script>
+    <script src="../js/editMenu.js"></script> -->
 </body>
 </html>
