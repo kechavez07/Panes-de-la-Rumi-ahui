@@ -3,7 +3,7 @@ const button = document.getElementById('submit-button');
 async function onSubmit(event) {
     event.preventDefault(); 
     console.log('entra el submit');
-    if (validateUser()) {
+    if (await validateUser()) { // Asegúrate de usar "await" aquí
         console.log('entra el validateUser');
         button.disabled = true;
         button.textContent = "Signing in...";
@@ -13,35 +13,44 @@ async function onSubmit(event) {
             window.location.href = "./html/home.html"; 
         }, 1000);
     } else {
-        alert("Invalid credentials! Please try again.");
+        alert("Credenciales incorrectas.");
     }
 }
 
 async function validateUser() {
-    const user = document.getElementById('user').value;
-    const password = document.getElementById('password').value;
-    // concecion de la base de base de datos con usurios
-    const formData = new FormData();
-    formData.append('user', user);
-    formData.append('password', password);
-
     try {
-        const response = await fetch('/path/to/your/php/login.php', {
+        const user = document.getElementById('user').value;
+        const password = document.getElementById('password').value;
+
+        const formData = new FormData();
+        formData.append('user', user);
+        formData.append('password', password);
+
+        const response = await fetch('php/login.php', {
             method: 'POST',
             body: formData
         });
-        const result = await response.json();
 
-        if (result.success) {
-            return true;
+        if (!response.ok) {
+            console.error('Error en la respuesta del servidor:', response.status);
+            return false; // Devuelve false si la respuesta no es correcta
         }
 
-    } catch (error) {
-        console.error('Error:', error);
-        return false;
-    }
+        const result = await response.json(); // Asegúrate de que el PHP devuelva JSON
 
+        if (result.success) {
+            console.log('Login exitoso:', result.message);
+            return true; // Usuario validado correctamente
+        } else {
+            console.log('Credenciales inválidas:', result.message || 'Sin mensaje');
+            return false; // Devuelve false si el login no es exitoso
+        }
+    } catch (error) {
+        console.error('Error al conectarse al servidor:', error);
+        return false; // Devuelve false si ocurre un error
+    }
 }
+
 
 const user = document.getElementById('user');
 const password = document.getElementById('password');

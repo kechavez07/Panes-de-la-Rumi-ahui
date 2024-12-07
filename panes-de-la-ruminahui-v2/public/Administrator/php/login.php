@@ -1,23 +1,41 @@
 <?php
-// Datos de conexión
-inport 'db.php';
+// Incluir archivo de conexión a la base de datos
+require 'db.php';
 
-// Obtener datos del formulario
-$user = $_POST['username'];
-$pass = $_POST['password'];
+// Establecer encabezados para respuesta JSON
+header('Content-Type: application/json');
 
-// Consulta para verificar las credenciales
-$sql = "SELECT * FROM usuarios WHERE username = '$user' AND password = '$pass'";
-$result = $conn->query($sql);
+// Verificar si se recibieron los datos
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username']) && isset($_POST['password'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-if ($result->num_rows > 0) {
-    // Usuario encontrado
-    echo "Login exitoso";
+    // Consulta segura con declaraciones preparadas
+    $stmt = $conn->prepare("SELECT * FROM usuarios WHERE username = ? AND password = ?");
+    $stmt->bind_param("ss", $username, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        echo json_encode([
+            "success" => true,
+            "message" => "Login exitoso"
+        ]);
+    } else {
+        echo json_encode([
+            "success" => false,
+            "message" => "Usuario o contraseña incorrectos"
+        ]);
+    }
+
+    $stmt->close();
 } else {
-    // Usuario no encontrado
-    echo "Usuario o contraseña incorrectos";
+    echo json_encode([
+        "success" => false,
+        "message" => "Datos incompletos"
+    ]);
 }
 
-// Cerrar conexión
+// Cerrar la conexión
 $conn->close();
 ?>
