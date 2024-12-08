@@ -102,4 +102,8 @@ body, html {
   .submit-button:hover:not(:disabled) {
     background-color: #ea580c;
   }
-  
+  @media (forced-colors: active) {
+    .element {
+        forced-color-adjust: auto;
+    }
+}
