@@ -4,7 +4,7 @@ async function onSubmit(event) {
     event.preventDefault(); 
     console.log('entra el submit');
     if (await validateUser()) { // Asegúrate de usar "await" aquí
-        console.log('entra el validateUser');
+        console.log('entra al if y se  va a home');
         button.disabled = true;
         button.textContent = "Signing in...";
 
@@ -25,6 +25,9 @@ async function validateUser() {
         const formData = new FormData();
         formData.append('user', user);
         formData.append('password', password);
+        console.log('entra el validateUser');
+        console.log(user);
+        console.log(password);
 
         const response = await fetch('php/login.php', {
             method: 'POST',
