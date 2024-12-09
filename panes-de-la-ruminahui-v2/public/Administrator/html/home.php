@@ -28,8 +28,8 @@
               <a href="#">Configuración</a>
               <!-- Submenú para configuración -->
               <ul class="submenu">
-                <li><a href="editar_menu.html">Editar Menú</a></li>
-                <li><a href="editar_promocion.html">Editar Promoción</a></li>
+                <li><a href="editar_menu.php">Editar Menú</a></li>
+                <li><a href="editar_promocion.php">Editar Promoción</a></li>
               </ul>
             </li>
             <li><a href="#">Cerrar Sesión</a></li>
@@ -47,7 +47,7 @@
             <p class="card-description"></p>
           </div>
           <div class="card-footer">
-            <a href="editar_menu.html" class="button">Ir</a>
+            <a href="editar_menu.php" class="button">Ir</a>
           </div>
         </div>
         <div class="grid">
@@ -58,7 +58,7 @@
               <p class="card-description"></p>
             </div>
             <div class="card-footer">
-              <a href="editar_promocion.html" class="button">Ir</a>
+              <a href="editar_promocion.php" class="button">Ir</a>
             </div>
           </div>
           <div class="grid">
@@ -69,7 +69,7 @@
                 <p class="card-description"></p>
               </div>
               <div class="card-footer">
-                <a href="blog.html" class="button">Ir</a>
+                <a href="blog.php" class="button">Ir</a>
               </div>
             </div>
             <div class="grid">
@@ -80,7 +80,7 @@
                 <p class="card-description"></p>
               </div>
               <div class="card-footer">
-                <a href="partner.html" class="button">Ir</a>
+                <a href="partner.php" class="button">Ir</a>
               </div>
             </div>
         <!-- Repite esta estructura para los demás productos -->

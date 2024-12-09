@@ -1,0 +1,18 @@
+.MisionVision {
+    margin: 30rem 4rem 3rem 4rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.MisionVision h1 {
+    color: gold;
+}
+
+.MisionVision h2{
+    color: var(--color12);
+}
+
+.MisionVision p{
+    color: var(--color12);
+    text-align: center;
+}

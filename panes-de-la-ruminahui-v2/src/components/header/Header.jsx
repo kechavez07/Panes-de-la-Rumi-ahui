@@ -4,7 +4,7 @@ import './Header.css'
 
 const Header = () => {
     const goToAdmin = () => {
-        const path = '/Administrator/index.html'
+        const path = 'http://localhost/panes-de-la-ruminahui-v2/public/Administrator/index.php'
         window.open(path, '_blank')
     }
 
@@ -16,6 +16,7 @@ const Header = () => {
             <div className="header-items">
                 <Link to="/" className="header-item">Inicio</Link>
                 <Link to="/history" className="header-item">Historia</Link>
+                <Link to="/blog" className="header-item">Blog</Link>
                 <Link to="/product" className="header-item">Productos</Link>
                 <Link to="/promotion" className="header-item">Promociones</Link>
                 <Link to="/contact" className="header-item">Contactos</Link>

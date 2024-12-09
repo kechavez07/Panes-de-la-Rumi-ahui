@@ -10,7 +10,7 @@ async function onSubmit(event) {
 
         setTimeout(() => {
             button.disabled = false;
-            window.location.href = "./html/home.html"; 
+            window.location.href = "./html/home.php"; 
         }, 1000);
     } else {
         alert("Credenciales incorrectas.");

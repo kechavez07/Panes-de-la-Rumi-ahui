@@ -5,11 +5,11 @@ const Card3 = (props) => {
     const { title, text, price } = props;
     return (
         <>
-            <div class="card3">
-                <div class="content3">
-                    <div class="title">{title}</div>
-                    <div class="price">{price}</div>
-                    <div class="description">{text}</div>
+            <div className="card3">
+                <div className="content3">
+                    <div className="title">{title}</div>
+                    <div className="price">{price}</div>
+                    <div className="description">{text}</div>
                 </div>
             </div>
         </>

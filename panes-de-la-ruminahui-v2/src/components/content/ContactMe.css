@@ -1,0 +1,95 @@
+.container-contactme{
+    display: flex;
+    justify-content: center;
+}
+
+.card-contactme {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
+            -4px -4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .title-contactme {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .form-contactme {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .group-contactme {
+    position: relative;
+  }
+  
+  .form-contactme .group-contactme label {
+    font-size: 14px;
+    color: rgb(99, 102, 102);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    transition: all .3s ease;
+  }
+  
+  .form-contactme .group-contactme input,
+  .form-contactme .group-contactme textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    outline: 0;
+    width: 93%;
+    background-color: transparent;
+  }
+  
+  .form-contactme .group-contactme input:placeholder-shown+ label,
+  .form-contactme .group-contactme textarea:placeholder-shown +label {
+    top: 10px;
+    background-color: transparent;
+  }
+  
+  .form-contactme .group-contactme input:focus,
+  .form-contactme .group-contactme textarea:focus {
+    border-color: #3366cc;
+  }
+  
+  .form-contactme .group-contactme input:focus+ label,
+  .form-contactme .group-contactme textarea:focus +label {
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    color: #3366cc;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .form-contactme .group-contactme textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .form-contactme button {
+    background-color: #3366cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .form-contactme button:hover {
+    background-color: #27408b;
+  }
+  
+  

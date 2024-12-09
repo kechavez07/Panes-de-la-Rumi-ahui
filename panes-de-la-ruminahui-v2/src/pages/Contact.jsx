@@ -2,6 +2,7 @@ import React from "react";
 import Header from '../components/header/Header'
 import './style.css'
 import WhatsApp from '../components/button/WhatsApp/index'
+import ContactMe from "../components/content/ContactMe";
 
 const Contact = () => {
     return (
@@ -13,10 +14,9 @@ const Contact = () => {
             </div>
             <div class="contact-info">
                 <h2>Informacion de Contacto</h2>
-                <p><strong>Dirección:</strong> 123 Bakery Lane, Sweet City</p>
-                <p><strong>Teléfono:</strong> +1 (123) 456-7890</p>
+                <p><strong>Dirección:</strong> Quito, Ecuador</p>
+                <p><strong>Teléfono:</strong> 0987654321</p>
                 <p><strong>Email:</strong> contact@ourbakery.com</p>
-                <p><strong>Horario:</strong> Mon-Sat, 7 AM - 7 PM</p>
             </div>
             <div class="map">
                 <p>Te esperamos!</p>
@@ -30,6 +30,7 @@ const Contact = () => {
                     title="Mapa"
                 ></iframe>
             </div>
+            <ContactMe/>
             <div className="button-whatsapp">
                 <WhatsApp/>
             </div>
