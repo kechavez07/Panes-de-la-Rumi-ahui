@@ -6,6 +6,8 @@ import Product from '../pages/Product';
 import Promotion from '../pages/Promotion';
 import Contact from '../pages/Contact';
 import Blog from "../pages/Blog";
+import LoginPage from "../pages/Login";
+
 
 const AppRoutes = () => {
     return (
@@ -16,6 +18,7 @@ const AppRoutes = () => {
             <Route path="/product" element={<Product />} />
             <Route path="/promotion" element={<Promotion />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<LoginPage></LoginPage>} />
         </Routes>
     );
 };

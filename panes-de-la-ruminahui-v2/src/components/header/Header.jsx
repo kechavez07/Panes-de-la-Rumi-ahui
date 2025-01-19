@@ -20,7 +20,8 @@ const Header = () => {
                 <Link to="/product" className="header-item">Productos</Link>
                 <Link to="/promotion" className="header-item">Promociones</Link>
                 <Link to="/contact" className="header-item">Contactos</Link>
-                <button onClick={goToAdmin} className="header-item-button">Login</button>
+                {/* <button onClick={goToAdmin} className="header-item-button">Login</button> */}
+                <Link to="/login" className="header-item-button">Login</Link>
             </div>
         </div>
     )
