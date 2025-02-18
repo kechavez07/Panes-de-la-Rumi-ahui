@@ -4,6 +4,15 @@
     transition: margin-left 0.3s ease; /* Transición suave cuando el Sidebar se abre/cierra */
     padding: 20px;
   }
+
+  .sidebar-toggle {
+    top: 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
   
   .dashboard.sidebar-open {
     margin-left: 250px; /* Añade un margen cuando el Sidebar está abierto */
