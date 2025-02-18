@@ -1,0 +1,20 @@
+/* Dashboard.css */
+.dashboard {
+    margin-left: 0; /* Inicialmente, no hay margen */
+    transition: margin-left 0.3s ease; /* Transición suave cuando el Sidebar se abre/cierra */
+    padding: 20px;
+  }
+  
+  .dashboard.sidebar-open {
+    margin-left: 250px; /* Añade un margen cuando el Sidebar está abierto */
+  }
+  
+  .dashboard h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard p {
+    color: #666;
+    line-height: 1.6;
+  }

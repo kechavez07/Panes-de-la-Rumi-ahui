@@ -7,6 +7,7 @@ import Promotion from '../pages/Promotion';
 import Contact from '../pages/Contact';
 import Blog from "../pages/Blog";
 import LoginPage from "../pages/Login";
+import Dashboard from "../pages/Dashboart";
 
 
 const AppRoutes = () => {
@@ -19,6 +20,7 @@ const AppRoutes = () => {
             <Route path="/promotion" element={<Promotion />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<LoginPage></LoginPage>} />
+            <Route path="/dashboart" element={<Dashboard/>} />
         </Routes>
     );
 };
