@@ -1,28 +1,36 @@
 import React, { useState } from 'react';
 import Sidebar from '../components/sidebar/Sidebar';
 import './dashboart.css';
+import Card1 from '../components/card/Card1';
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-    console.log('Dashboard - isSidebarOpen:', isSidebarOpen); // Verifica si el estado se actualiza
-  
-    const toggleSidebar = () => {
-      setIsSidebarOpen(!isSidebarOpen);
-    };
-  
-    return (
-      <div>
-        <Sidebar isOpen={isSidebarOpen} />
-        <div className={`dashboard ${isSidebarOpen ? 'sidebar-open' : ''}`}>
-          <button onClick={toggleSidebar} className="sidebar-toggle">
-            {isSidebarOpen ? 'Cerrar' : 'Abrir'} Sidebar
-          </button>
-          <h1>Dashboard</h1>
-          <p>Welcome to the Dashboard!</p>
-          <p>Here you can see all the information about your account.</p>
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarVisible(!isSidebarVisible); // Cambia el estado al hacer clic
+  };
+
+  return (
+    <>
+      <nav>
+        <button className="sidebar-toggle" onClick={toggleSidebar}>
+          ☰
+        </button>
+        <h1>Gestión de panadería</h1>
+      </nav>
+      <div className="dashboard-container">
+        <Sidebar isVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
+        <div className="dashboard">
+          <div className="container-cards">
+            <Link to="/history" className="header-item"><Card1 text="Historia" path="/icons/shop.svg"/></Link>
+            <Link to="/product" className="header-item"><Card1 text="Productos" path="/icons/shopping-car.svg"/></Link>
+            <Link to="/promotion" className="header-item"><Card1 text="Promociones" path="/icons/star.svg"/></Link>
+          </div>
         </div>
       </div>
-    );
-  }
+    </>
+  );
+}
 
 

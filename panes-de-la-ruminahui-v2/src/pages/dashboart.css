@@ -1,29 +1,50 @@
-/* Dashboard.css */
+.dashboard-container {
+  display: flex;
+  margin-left: 250px; /* Ajusta este valor según el ancho de tu sidebar */
+}
+
 .dashboard {
-    margin-left: 0; /* Inicialmente, no hay margen */
-    transition: margin-left 0.3s ease; /* Transición suave cuando el Sidebar se abre/cierra */
-    padding: 20px;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: #f4f4f4;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+nav{
+  text-align: center;
+  padding: 2rem 2rem;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  height: 2rem;
+}
+nav h1{
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    margin-left: 0;
   }
 
   .sidebar-toggle {
-    top: 10px;
-    background-color: #555;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+    display: block;
   }
-  
-  .dashboard.sidebar-open {
-    margin-left: 250px; /* Añade un margen cuando el Sidebar está abierto */
-  }
-  
-  .dashboard h1 {
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .dashboard p {
-    color: #666;
-    line-height: 1.6;
-  }
+}
+

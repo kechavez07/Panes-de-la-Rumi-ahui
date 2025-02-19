@@ -1,18 +1,32 @@
 import React from 'react';
 import './sidebar.css';
 
-const Sidebar = ({ isOpen }) => {
+const Sidebar = ({ isVisible }) => {
   return (
-    <>
-    <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-      <ul>
-        <li>Inicio</li>
-        <li>Acerca de</li>
-        <li>Servicios</li>
-        <li>Contacto</li>
+    <div className={`sidebar ${isVisible ? 'show' : ''}`}>
+      {/* Sección del usuario */}
+      <div className="user-section">
+        <img 
+          src="public\images\usuario.png" // URL de la imagen del usuario
+          alt="User" 
+          className="user-image"
+        />
+        <div className="user-info">
+          <span className="user-name">Nombre del Usuario</span>
+          <span className="user-email">usuario@example.com</span>
+        </div>
+      </div>
+
+      {/* Lista de opciones del sidebar */}
+      <ul className="sidebar-list">
+        <li>FinSet</li>
+        <li>Destboard</li>
+        <li>Transactions</li>
+        <li>Settings</li>
+        <li>Help</li>
+        <li>Log out</li>
       </ul>
     </div>
-    </>
   );
 };
 
