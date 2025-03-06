@@ -1,32 +1,38 @@
 import React from 'react';
-import './sidebar.css';
+import './sidebar.css'; // Aquí van estilos específicos del sidebar
 
 const Sidebar = ({ isVisible }) => {
   return (
-    <div className={`sidebar ${isVisible ? 'show' : ''}`}>
-      {/* Sección del usuario */}
+    <aside className={`sidebar ${isVisible ? 'show' : ''}`}>
+      {/* Sección del usuario (opcional) */}
       <div className="user-section">
-        <img 
-          src="public\images\usuario.png" // URL de la imagen del usuario
-          alt="User" 
+        <img
+          src="/images/usuario.png" /* Ajusta la ruta a tu carpeta */
+          alt="User"
           className="user-image"
         />
         <div className="user-info">
-          <span className="user-name">Nombre del Usuario</span>
+          <p className="user-name">Nombre del Usuario</p>
           <span className="user-email">usuario@example.com</span>
         </div>
       </div>
 
-      {/* Lista de opciones del sidebar */}
-      <ul className="sidebar-list">
-        <li>FinSet</li>
-        <li>Destboard</li>
-        <li>Transactions</li>
-        <li>Settings</li>
-        <li>Help</li>
-        <li>Log out</li>
+      <div className="sidebar-header">
+        <span className="sidebar-title">Main items</span>
+      </div>
+      <ul>
+        <li className="active">Dashboard</li>
+        <li>Orders</li>
       </ul>
-    </div>
+
+      <div className="sidebar-header">
+        <span className="sidebar-title">Analytics</span>
+      </div>
+      <ul>
+        <li>Reports</li>
+        <li>Integrations</li>
+      </ul>
+    </aside>
   );
 };
 
