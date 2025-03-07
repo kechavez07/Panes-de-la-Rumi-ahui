@@ -13,7 +13,7 @@ export default function Dashboard() {
   const toggleSidebar = () => {
     setIsSidebarVisible(!isSidebarVisible);
   };
-
+  
   return (
     <div className="app-container">
       <Sidebar isVisible={isSidebarVisible} />

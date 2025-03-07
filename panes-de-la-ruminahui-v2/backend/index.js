@@ -1,9 +1,22 @@
 const express = require('express');
 const pool = require('./db');
+const cors = require('cors');
 const app = express();
 const PORT = 3000;
 
+app.use(cors());
 app.use(express.json());
+
+app.get('/video_camera', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT * FROM video_camera');
+    console.log("video camera")
+    res.json(result.rows);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Error');
+  }
+});
 
 /////////// TABLE: product ///////////
 
@@ -60,6 +73,21 @@ app.put('/product/:id', async (req, res) => {
     res.status(500).send('Error');
   }
 });
+app.put('/mouse/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { name, mark, price } = req.body;
+    const result = await pool.query(
+      'UPDATE product SET name = $2, mark = $3, price = $4 WHERE id_product = $1 RETURNING *',
+      [ id, name, mark, price ]  // Eliminé 'description' e 'id_category' porque no existen en este contexto
+    );
+    res.json(result.rows[0]);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Error');
+  }
+});
+
 
 // delete product
 app.delete('/product/:id', async (req, res) => {
@@ -412,6 +440,30 @@ app.delete('/rol/:id', async (req, res) => {
 
 //users
 
+//Buscar por usuario y contraseña 
+app.post('/users/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const result = await pool.query(
+      'SELECT username FROM users WHERE username = $1 AND password = $2;',
+      [username, password]
+    );
+
+    if (result.rows.length > 0) {
+      res.json({ message: 'Inicio de sesión exitoso', user: result.rows[0] });
+    } else {
+      res.status(401).json({ message: 'Credenciales inválidas' });
+    }
+
+  } catch (error) {
+    console.error('Error en la consulta', error);
+    res.status(500).json({ error: 'Error interno del servidor' });
+  }
+});
+
+
+
 // Obtener todos los usuarios
 app.get('/users', async (req, res) => {
   try {
@@ -742,4 +794,5 @@ app.delete('/partner/:id', async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log("se actualizoooooo")
 });
