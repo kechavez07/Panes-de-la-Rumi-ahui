@@ -28,7 +28,8 @@ export default function Dashboard() {
   },
   {
     name: "funcion nueva",
-    description: "descripcion de la funcion nueva"
+    description: "descripcion de la funcion nueva",
+    path: ""
   }
 ];
 
