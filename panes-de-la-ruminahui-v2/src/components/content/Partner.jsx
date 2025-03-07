@@ -8,7 +8,7 @@ const Partner = () => {
     
     useEffect(() => {
         const tableName = "partner";
-        fetch(`http://localhost/panes-de-la-ruminahui-v2/public/Administrator/service/get_data.php?table=${tableName}`)
+        fetch(`https://api-panes-ruminahui.onrender.com/${tableName}`)
             .then((response) => response.json())
             .then((data) => {
                 if (data.error) {

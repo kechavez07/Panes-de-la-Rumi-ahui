@@ -22,7 +22,6 @@ const Sidebar = ({ isVisible }) => {
       </div>
       <ul>
         <li className="active">Dashboard</li>
-        <li>Orders</li>
       </ul>
 
       <div className="sidebar-header">
@@ -30,7 +29,6 @@ const Sidebar = ({ isVisible }) => {
       </div>
       <ul>
         <li>Reports</li>
-        <li>Integrations</li>
       </ul>
     </aside>
   );

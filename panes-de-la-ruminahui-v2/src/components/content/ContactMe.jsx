@@ -18,7 +18,7 @@ const ContactMe = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch("http://localhost/panes-de-la-ruminahui-v2/public/Administrator/service/save-contact.php", {
+        fetch("https://api-panes-ruminahui.onrender.com/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

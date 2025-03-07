@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 import './Header.css'
 
 const Header = () => {
-    const goToAdmin = () => {
-        const path = 'http://localhost/panes-de-la-ruminahui-v2/public/Administrator/index.php'
-        window.open(path, '_blank')
-    }
-
+    
     return (
         <div className="header">
             <div className="header-logo">
@@ -20,7 +16,6 @@ const Header = () => {
                 <Link to="/product" className="header-item">Productos</Link>
                 <Link to="/promotion" className="header-item">Promociones</Link>
                 <Link to="/contact" className="header-item">Contactos</Link>
-                {/* <button onClick={goToAdmin} className="header-item-button">Login</button> */}
                 <Link to="/login" className="header-item-button">Login</Link>
             </div>
         </div>
